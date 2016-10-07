@@ -1,4 +1,4 @@
-# senor-docker
+# Selendocker
 Selenium Hub + Docker-compose
 
 ##Installation:
@@ -33,8 +33,21 @@ It will add 1 more chrome container and 2 more firefox container.Total container
 It will destroy 1 chrome container and 2 firefox container. Total container count will be 2, Check at http://172.17.0.2:4444/grid/console
 
 # Note:
-1. You may need to ```sudo`` if user permission are not optimal.
+1. You may need to `sudo` if user permission are not optimal.
 2. Point you Selenium remote at http://172.17.0.2:4444/wd/hub
 3. It will start all the container you have previously created,so make sure you either control the container count by **scale** or remove the containers once you are done with them.
-
-
+4. If you need a specifc node comment the other nodes. e.g. if you don't want firefox-
+```Dockerfile
+hub:
+  image: selenium/hub
+  ports:
+    - "4444:4444"
+#firefox:
+#  image: selenium/node-firefox
+#  links:
+#    - hub
+chrome:
+  image: selenium/node-chrome
+  links:
+    - hub
+```
