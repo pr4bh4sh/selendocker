@@ -1,5 +1,5 @@
 # Selendocker
-Selenium Hub + Docker-compose
+Selenium Hub + Docker-compose [1366x768]
 
 ##Installation:
 ```shell
@@ -51,3 +51,6 @@ chrome:
   links:
     - hub
 ```
+
+# Extra config
+1. If you need debug capabiliy such as vnc use debug node from https://github.com/SeleniumHQ/docker-selenium
