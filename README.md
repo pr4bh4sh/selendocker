@@ -2,6 +2,8 @@
 Selenium Hub + Docker-compose [1366x768]
 
 ##Installation:
+## Method 1
+
 ```shell
 # install docker:
 $ wget -qO- https://get.docker.com/ | sh
@@ -10,7 +12,7 @@ $ wget -qO- https://get.docker.com/ | sh
 $ curl -L https://github.com/docker/compose/releases/download/1.2.0/docker-compose-`uname -s`-`uname -m` > $ /usr/local/bin/docker-compose
 $ chmod +x /usr/local/bin/docker-compose
 ```
-OR with brew 
+## Method 2
 
 ```brew install docker-compose```
 
